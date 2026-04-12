@@ -18,17 +18,19 @@ FROM nginx:stable-alpine
 
 COPY --from=builder /app/dist /usr/share/nginx/html
 
+COPY nginx.conf /etc/nginx/conf.d/default.conf
+
 RUN addgroup -S appgroup && adduser -S nonrootuser -G appgroup
 
 RUN mkdir -p /var/cache/nginx /var/run /var/log/nginx && \
     chown -R nonrootuser:appgroup /var/cache/nginx /var/run /var/log/nginx && \
     chown -R nonrootuser:appgroup /usr/share/nginx/html
-    
+
 RUN touch /var/run/nginx.pid && \
     chown nonrootuser:appgroup /var/run/nginx.pid
 
 USER nonrootuser
 
-EXPOSE 80
+EXPOSE 8080
 
 CMD ["nginx", "-g", "daemon off;"]
