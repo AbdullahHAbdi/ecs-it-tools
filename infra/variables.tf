@@ -49,3 +49,33 @@ variable "container_port" {
   type        = number
   default     = 8080
 }
+
+variable "domain_name" {
+  description = "main domain name"
+  type        = string
+  default     = "abdullahabdi.com"
+}
+
+variable "subdomain" {
+  description = "subdomain for app tm"
+  type        = string
+  default     = "tm"
+}
+
+variable "task_cpu" {
+  description = "cpu amount for task"
+  type        = string
+  default     = "512"
+}
+
+variable "task_memory" {
+  description = "memory amount for task"
+  type        = string
+  default     = "1024"
+}
+
+variable "desired_count" {
+  description = "number of ecs tasks to run"
+  type        = number
+  default     = 1
+}
