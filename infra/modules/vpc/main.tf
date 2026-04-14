@@ -51,9 +51,8 @@ resource "aws_eip" "nat" {
 }
 
 resource "aws_nat_gateway" "gw" {
-  connectivity_type = "public"
-  vpc_id            = aws_vpc.main.id
-  allocation_id     = aws_eip.nat.id
+  allocation_id = aws_eip.nat.id
+  subnet_id     = aws_subnet.public[0].id
 
   tags = merge(var.tags, {
     Name = "${var.project_name}-nat-gw"
@@ -61,7 +60,6 @@ resource "aws_nat_gateway" "gw" {
 
   depends_on = [aws_internet_gateway.gw]
 }
-
 
 resource "aws_route_table" "public" {
   vpc_id = aws_vpc.main.id
