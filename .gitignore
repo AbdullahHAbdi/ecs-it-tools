@@ -25,4 +25,5 @@ crash.log
 crash.*.log
 *.log
 *.plan
-.terraform.lock.hcl
+.terraform.lock.hcloidc-trust-policy.json
+oidc-trust-policy.json
