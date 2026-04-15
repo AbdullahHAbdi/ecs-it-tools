@@ -113,7 +113,7 @@ All pipelines authenticate with AWS using OIDC; no static AWS credentials are st
 
 ### Pipeline Screenshots
 
-**App Pipeline — Build and Push**
+**App Pipeline - Build and Push**
 
 ![App Pipeline](images/build-and-push-to-ecr.png)
 
@@ -134,31 +134,31 @@ All pipelines authenticate with AWS using OIDC; no static AWS credentials are st
 ## AWS Console Screenshots
 
 
-**ECS Service — Running Tasks**
+**ECS Service - Running Tasks**
 
 ![ECS Running](images/ecs-service-running.png)
 
 ---
 
-**ALB — Active Status**
+**ALB - Active Status**
 
 ![ALB Active](images/alb-active-status.png)
 
 ---
 
-**Target Group — Healthy Targets**
+**Target Group - Healthy Targets**
 
 ![Target Group](images/tg-healthy-target.png)
 
 ---
 
-**ECR — Image Pushed**
+**ECR - Image Pushed**
 
 ![ECR Image](images/ecr-image-pushed.png)
 
 ---
 
-**ACM Certificate — Issued**
+**ACM Certificate - Issued**
 
 ![ACM Certificate](images/acm-certificate-success.png)
 
